@@ -1,8 +1,11 @@
 import React from 'react';
 import FounderCard from '../components/FounderCard';
+import DragDropWorkflow from '../components/DragDropWorkflow';
+import VoiceCallSimulator from '../components/VoiceCallSimulator';
+import SaasArchVisualizer from '../components/SaasArchVisualizer';
+import TechStackGrid from '../components/TechStackGrid';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
-import TechStackGrid from '../components/TechStackGrid';
 import { 
   Sparkles, 
   Bot, 
@@ -35,7 +38,7 @@ export default function Home({ setActivePage }) {
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            Custom Voice AI Agents, RAG Knowledge Systems, Full-Stack SaaS Apps (Claude Code, Antigravity 2.0) & N8N Automations — designed by <strong className="text-white">Nadir Habib</strong> to eliminate manual bottlenecks and boost ROI.
+            Custom Voice AI Agents, RAG Systems, Full-Stack SaaS Apps (Claude Code, Antigravity 2.0, Codex) & N8N Automations — designed by <strong className="text-white">Nadir Habib</strong> to eliminate manual bottlenecks and boost ROI.
           </p>
 
           {/* Core Action CTAs */}
@@ -47,7 +50,7 @@ export default function Home({ setActivePage }) {
               className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-[#FF5500] via-[#FF7700] to-[#FF5500] text-white font-extrabold text-sm shadow-xl shadow-[#FF5500]/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              Book Cal.com Strategy Meeting
+              Book Cal.com Strategy Call
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
 
@@ -120,10 +123,19 @@ export default function Home({ setActivePage }) {
         </div>
       </section>
 
-      {/* TECH STACK SHOWCASE GRID */}
+      {/* 1. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* INTERACTIVE WORKFLOW SIMULATOR SECTION */}
+      {/* 2. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      <DragDropWorkflow />
+
+      {/* 3. SAAS WEB APP ENGINEERING VISUALIZER */}
+      <SaasArchVisualizer />
+
+      {/* 4. LIVE VOICE AI PHONE DIALER DEMO */}
+      <VoiceCallSimulator />
+
+      {/* 5. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>
