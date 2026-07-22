@@ -4,6 +4,9 @@ import DragDropWorkflow from '../components/DragDropWorkflow';
 import VoiceCallSimulator from '../components/VoiceCallSimulator';
 import SaasArchVisualizer from '../components/SaasArchVisualizer';
 import TechStackGrid from '../components/TechStackGrid';
+import CyberTerminal from '../components/CyberTerminal';
+import RoiCalculator3 from '../components/RoiCalculator3';
+import CaseStudyMatrix from '../components/CaseStudyMatrix';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
 import { 
@@ -126,16 +129,25 @@ export default function Home({ setActivePage }) {
       {/* 1. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* 2. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      {/* 2. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
+      <CyberTerminal />
+
+      {/* 3. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
       <DragDropWorkflow />
 
-      {/* 3. SAAS WEB APP ENGINEERING VISUALIZER */}
+      {/* 4. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
+      <RoiCalculator3 />
+
+      {/* 5. SAAS WEB APP ENGINEERING VISUALIZER */}
       <SaasArchVisualizer />
 
-      {/* 4. LIVE VOICE AI PHONE DIALER DEMO */}
+      {/* 6. LIVE VOICE AI PHONE DIALER DEMO */}
       <VoiceCallSimulator />
 
-      {/* 5. N8N SIMULATOR SECTION */}
+      {/* 7. VERIFIED CASE STUDY & REVIEW MATRIX */}
+      <CaseStudyMatrix />
+
+      {/* 8. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>
