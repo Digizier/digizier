@@ -1,82 +1,77 @@
 import React from 'react';
 import CommunityHub from '../components/CommunityHub';
-import { Download, FileCode, Check, Sparkles, MessageSquare } from 'lucide-react';
+import MagneticButton from '../components/MagneticButton';
+import { Youtube, Users, MessageSquare, Briefcase, Sparkles } from 'lucide-react';
 
-export default function CommunityPage({ setActivePage }) {
-  const templates = [
-    {
-      title: 'Voice AI Lead Qualifier (Retell + N8N)',
-      description: 'Complete JSON blueprint for qualifying inbound calls & booking Google Calendar slots.',
-      category: 'Voice AI',
-      downloadUrl: 'https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9'
-    },
-    {
-      title: 'WhatsApp Evolution API Auto-Responder',
-      description: 'Webhook router connecting Meta/Evolution API with OpenAI GPT-4 for automated FAQs.',
-      category: 'Chatbot',
-      downloadUrl: 'https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9'
-    },
-    {
-      title: 'CRM Lead Sync Pipeline (HubSpot + Airtable)',
-      description: 'Multi-branch workflow that formats incoming webhook payloads & updates sales pipelines.',
-      category: 'N8N Workflow',
-      downloadUrl: 'https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9'
-    }
-  ];
-
+export default function CommunityPage() {
   return (
-    <div className="space-y-16 py-6">
-      {/* Community Hub Grid */}
+    <div className="space-y-16 py-6 max-w-7xl mx-auto">
+      
+      {/* Page Header */}
+      <div className="text-center max-w-3xl mx-auto space-y-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-[#FF5500]/30 text-[#FF5500] text-xs font-bold shadow-lg shadow-[#FF5500]/10">
+          <Youtube className="w-4 h-4 text-rose-500" /> Nadir Habib’s Official AI Community
+        </div>
+        
+        <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-white">
+          Learn & Build With <span className="text-gradient-orange">Digizier No-Code AI</span>
+        </h1>
+        
+        <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+          Join 4 weekly video tutorials on YouTube, step-by-step Skool courses, or get 1-on-1 assistance in our VIP WhatsApp group.
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <MagneticButton href="https://www.youtube.com/@Digizier" variant="primary" icon={Youtube}>
+            Subscribe on YouTube (@Digizier)
+          </MagneticButton>
+
+          <MagneticButton href="https://skool.com/digizier-4902/classroom" variant="ghost" icon={Users}>
+            Join Skool Classroom
+          </MagneticButton>
+        </div>
+      </div>
+
+      {/* Main Community Hub Grid */}
       <CommunityHub />
 
-      {/* Free Blueprints & Templates Vault */}
-      <section className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/30 text-[#00D2FF] text-xs font-semibold mb-2">
-              <Sparkles className="w-3.5 h-3.5" /> Free Resource Vault
-            </div>
-            <h3 className="font-heading font-extrabold text-2xl text-white">
-              Download Ready-to-Deploy N8N Workflows
-            </h3>
-            <p className="text-xs text-slate-400 mt-1">
-              Access free JSON blueprints shared exclusively in the Digizier WhatsApp & Skool community.
-            </p>
-          </div>
+      {/* Fiverr & Upwork Escrow Bar */}
+      <div className="glass-panel rounded-3xl p-8 border border-white/10 text-center space-y-4">
+        <h3 className="font-heading font-extrabold text-2xl text-white">Need Custom 1-on-1 Client Project Execution?</h3>
+        <p className="text-slate-300 text-sm max-w-xl mx-auto">
+          Order safely via Fiverr or Upwork Escrow Protection, or book a direct strategy call on Cal.com.
+        </p>
 
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <a
-            href="https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9"
+            href="https://fiverr.com/s/XL5Nbme"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/30 hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 shrink-0"
+            className="px-6 py-3 rounded-xl bg-[#1DBF73] text-white font-bold text-xs shadow-lg shadow-[#1DBF73]/30 hover:bg-emerald-600 transition-colors flex items-center gap-2"
           >
-            <MessageSquare className="w-4 h-4" /> Get All Templates on WhatsApp
+            <Briefcase className="w-4 h-4" /> View Fiverr Gig Profile
+          </a>
+
+          <a
+            href="https://upwork.com/freelancers/~01b5235bf28b7d4ee0?mp_source=share"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-[#14A800] text-white font-bold text-xs shadow-lg shadow-[#14A800]/30 hover:bg-emerald-700 transition-colors flex items-center gap-2"
+          >
+            <Briefcase className="w-4 h-4" /> View Upwork Top Rated Profile
+          </a>
+
+          <a
+            href="https://cal.com/digizier-23voae/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-[#FF5500] text-white font-bold text-xs shadow-lg shadow-[#FF5500]/30 hover:bg-[#FF7700] transition-colors flex items-center gap-2"
+          >
+            <Sparkles className="w-4 h-4" /> Book Cal.com Call
           </a>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {templates.map((tpl, i) => (
-            <div key={i} className="bg-[#030712]/80 rounded-2xl p-5 border border-white/10 space-y-4 flex flex-col justify-between">
-              <div className="space-y-2">
-                <span className="text-[10px] font-bold text-[#FF5500] bg-[#FF5500]/10 px-2 py-0.5 rounded border border-[#FF5500]/20">
-                  {tpl.category}
-                </span>
-                <h4 className="font-heading font-bold text-white text-base">{tpl.title}</h4>
-                <p className="text-xs text-slate-400">{tpl.description}</p>
-              </div>
-
-              <a
-                href={tpl.downloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 rounded-xl bg-white/5 hover:bg-[#FF5500]/20 text-slate-200 hover:text-[#FF5500] border border-white/10 hover:border-[#FF5500]/30 text-xs font-semibold transition-all flex items-center justify-center gap-2"
-              >
-                <Download className="w-4 h-4 text-[#FF5500]" /> Access Template
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
