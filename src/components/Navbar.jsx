@@ -23,38 +23,39 @@ export default function Navbar({ activePage, setActivePage }) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 px-4 py-3 sm:px-8">
-      <div className="max-w-7xl mx-auto glass-panel rounded-2xl border border-white/10 px-4 py-3 sm:px-6 flex items-center justify-between shadow-2xl backdrop-blur-xl">
+    <header className="sticky top-0 z-50 px-3 py-3 sm:px-8">
+      <div className="max-w-7xl mx-auto glass-panel rounded-2xl border border-white/10 px-4 py-2.5 sm:px-6 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-4">
         
-        {/* Official Digizier Logo */}
+        {/* Brand Logo & Title */}
         <button 
           onClick={() => setActivePage('home')}
-          className="flex items-center gap-3 group text-left focus:outline-none"
+          className="flex items-center gap-3 group text-left focus:outline-none shrink-0"
         >
-          <div className="w-10 h-10 rounded-full overflow-hidden border border-[#FF5500]/50 shadow-lg shadow-[#FF5500]/30 group-hover:scale-105 transition-transform duration-300 bg-[#0A192F] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-[#FF5500]/60 shadow-lg shadow-[#FF5500]/30 group-hover:scale-105 transition-transform duration-300 bg-[#0A192F] flex items-center justify-center shrink-0">
             <img 
               src="/digizier_logo.png" 
               alt="Digizier Official Logo" 
               className="w-full h-full object-cover"
             />
           </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="font-heading font-extrabold text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors">
+
+          <div className="flex flex-col justify-center">
+            <div className="flex items-center gap-2">
+              <span className="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors leading-none">
                 DIGIZIER
               </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#FF5500]/20 text-[#FF5500] border border-[#FF5500]/30">
+              <span className="hidden sm:inline-block px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#FF5500]/20 text-[#FF5500] border border-[#FF5500]/30 tracking-wider">
                 AI AGENTS
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 font-medium tracking-wide">
+            <span className="text-[10px] text-slate-400 font-semibold tracking-wider uppercase mt-0.5">
               BY NADIR HABIB
-            </p>
+            </span>
           </div>
         </button>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden lg:flex items-center gap-1 bg-[#030712]/60 p-1.5 rounded-xl border border-white/5">
+        <nav className="hidden lg:flex items-center gap-1 bg-[#030712]/70 p-1.5 rounded-xl border border-white/5">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activePage === item.id;
@@ -62,9 +63,9 @@ export default function Navbar({ activePage, setActivePage }) {
               <button
                 key={item.id}
                 onClick={() => setActivePage(item.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative ${
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 relative whitespace-nowrap ${
                   isActive
-                    ? 'text-white bg-gradient-to-r from-[#FF5500] to-[#FF7700] shadow-md shadow-[#FF5500]/30 font-semibold'
+                    ? 'text-white bg-gradient-to-r from-[#FF5500] to-[#FF7700] shadow-md shadow-[#FF5500]/30'
                     : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -75,24 +76,24 @@ export default function Navbar({ activePage, setActivePage }) {
           })}
         </nav>
 
-        {/* Right CTA Actions */}
-        <div className="hidden sm:flex items-center gap-3">
+        {/* Right Action Buttons */}
+        <div className="hidden sm:flex items-center gap-2.5 shrink-0">
           <a
             href="https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all whitespace-nowrap"
           >
-            <MessageSquare className="w-4 h-4 text-emerald-400" />
-            <span>WhatsApp Community</span>
+            <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="hidden xl:inline">WhatsApp</span> Community
           </a>
 
           <button
             onClick={() => setActivePage('contact')}
-            className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs text-white shadow-lg shadow-[#FF5500]/25"
+            className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs text-white shadow-lg shadow-[#FF5500]/25 shrink-0"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-[#FF5500] via-[#00D2FF] to-[#FF5500] animate-pulse-glow"></span>
-            <span className="relative block px-4 py-2 rounded-[11px] bg-[#0A192F] group-hover:bg-transparent transition-colors duration-300 flex items-center gap-1.5">
+            <span className="relative block px-3.5 py-2 rounded-[11px] bg-[#0A192F] group-hover:bg-transparent transition-colors duration-300 flex items-center gap-1.5 whitespace-nowrap font-bold">
               <Sparkles className="w-3.5 h-3.5 text-[#FF5500] group-hover:text-white" />
               Book AI Call
             </span>
@@ -102,7 +103,7 @@ export default function Navbar({ activePage, setActivePage }) {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white"
+          className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white shrink-0"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
