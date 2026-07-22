@@ -7,6 +7,9 @@ import TechStackGrid from '../components/TechStackGrid';
 import CyberTerminal from '../components/CyberTerminal';
 import RoiCalculator3 from '../components/RoiCalculator3';
 import CaseStudyMatrix from '../components/CaseStudyMatrix';
+import WebGLGlobe from '../components/WebGLGlobe';
+import MultiDeviceViewport from '../components/MultiDeviceViewport';
+import MagneticButton from '../components/MagneticButton';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
 import { 
@@ -44,28 +47,15 @@ export default function Home({ setActivePage }) {
             Custom Voice AI Agents, RAG Systems, Full-Stack SaaS Apps (Claude Code, Antigravity 2.0, Codex) & N8N Automations — designed by <strong className="text-white">Nadir Habib</strong> to eliminate manual bottlenecks and boost ROI.
           </p>
 
-          {/* Core Action CTAs */}
+          {/* Core Action CTAs with 3D Magnetic Physics Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a
-              href="https://cal.com/digizier-23voae/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-[#FF5500] via-[#FF7700] to-[#FF5500] text-white font-extrabold text-sm shadow-xl shadow-[#FF5500]/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group"
-            >
-              <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            <MagneticButton href="https://cal.com/digizier-23voae/30min" variant="primary">
               Book Cal.com Strategy Call
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </MagneticButton>
 
-            <a
-              href="https://wa.me/923222685868"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-7 py-4 rounded-2xl glass-panel border border-emerald-500/30 text-emerald-300 font-bold text-sm hover:bg-emerald-500/20 transition-all flex items-center justify-center gap-2"
-            >
-              <MessageSquare className="w-5 h-5 text-emerald-400" />
+            <MagneticButton href="https://wa.me/923222685868" variant="ghost" icon={MessageSquare}>
               Chat on WhatsApp
-            </a>
+            </MagneticButton>
           </div>
 
           {/* Key Value Badges */}
@@ -129,25 +119,31 @@ export default function Home({ setActivePage }) {
       {/* 1. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* 2. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
+      {/* 2. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
+      <WebGLGlobe />
+
+      {/* 3. MULTI-DEVICE SAAS LIVE VIEWPORT */}
+      <MultiDeviceViewport />
+
+      {/* 4. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
       <CyberTerminal />
 
-      {/* 3. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      {/* 5. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
       <DragDropWorkflow />
 
-      {/* 4. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
+      {/* 6. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
       <RoiCalculator3 />
 
-      {/* 5. SAAS WEB APP ENGINEERING VISUALIZER */}
+      {/* 7. SAAS WEB APP ENGINEERING VISUALIZER */}
       <SaasArchVisualizer />
 
-      {/* 6. LIVE VOICE AI PHONE DIALER DEMO */}
+      {/* 8. LIVE VOICE AI PHONE DIALER DEMO */}
       <VoiceCallSimulator />
 
-      {/* 7. VERIFIED CASE STUDY & REVIEW MATRIX */}
+      {/* 9. VERIFIED CASE STUDY & REVIEW MATRIX */}
       <CaseStudyMatrix />
 
-      {/* 8. N8N SIMULATOR SECTION */}
+      {/* 10. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>
