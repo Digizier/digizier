@@ -9,7 +9,7 @@ import RoiCalculator3 from '../components/RoiCalculator3';
 import CaseStudyMatrix from '../components/CaseStudyMatrix';
 import WebGLGlobe from '../components/WebGLGlobe';
 import MultiDeviceViewport from '../components/MultiDeviceViewport';
-import MagneticButton from '../components/MagneticButton';
+import Button3D from '../components/Button3D';
 import BlueprintGenerator from '../components/BlueprintGenerator';
 import AudioSpectrum from '../components/AudioSpectrum';
 import EscrowBadgeSuite from '../components/EscrowBadgeSuite';
@@ -51,15 +51,15 @@ export default function Home({ setActivePage }) {
             Custom Voice AI Agents, RAG Systems, Full-Stack SaaS Apps (Claude Code, Antigravity 2.0, Codex) & N8N Automations — designed by <strong className="text-white">Nadir Habib</strong> to eliminate manual bottlenecks and boost ROI.
           </p>
 
-          {/* Core Action CTAs with 3D Magnetic Physics Buttons */}
+          {/* Core Action CTAs with 3D Parallax Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <MagneticButton href="https://cal.com/digizier-23voae/30min" variant="primary">
+            <Button3D href="https://cal.com/digizier-23voae/30min" variant="orange">
               Book Cal.com Strategy Call
-            </MagneticButton>
+            </Button3D>
 
-            <MagneticButton href="https://wa.me/923222685868" variant="ghost" icon={MessageSquare}>
+            <Button3D href="https://wa.me/923222685868" variant="ghost" icon={MessageSquare}>
               Chat on WhatsApp
-            </MagneticButton>
+            </Button3D>
           </div>
 
           {/* Key Value Badges */}

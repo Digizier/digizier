@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LaserLogoReactor from './LaserLogoReactor';
+import Button3D from './Button3D';
 import { 
   Bot, 
   Cpu, 
@@ -32,10 +33,8 @@ export default function Navbar({ activePage, setActivePage }) {
           onClick={() => setActivePage('home')}
           className="flex items-center gap-2.5 sm:gap-3 group text-left focus:outline-none shrink-0"
         >
-          {/* Laser Scanner Reactor Logo */}
           <LaserLogoReactor />
 
-          {/* Clean Title Stack */}
           <div className="flex flex-col justify-center">
             <span className="font-heading font-extrabold text-lg sm:text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors leading-none">
               DIGIZIER
@@ -80,15 +79,10 @@ export default function Navbar({ activePage, setActivePage }) {
             <span>WhatsApp Community</span>
           </a>
 
-          <a
-            href="https://cal.com/digizier-23voae/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-[#FF5500]/30 hover:scale-105 transition-all duration-200 flex items-center gap-2 whitespace-nowrap shrink-0 border border-[#FF5500]/40"
-          >
-            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+          {/* 3D Visual Parallax Header Button */}
+          <Button3D href="https://cal.com/digizier-23voae/30min" variant="orange">
             Book Cal.com Call
-          </a>
+          </Button3D>
         </div>
 
         {/* Mobile Menu Button */}
