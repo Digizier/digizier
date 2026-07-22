@@ -16,6 +16,8 @@ import EscrowBadgeSuite from '../components/EscrowBadgeSuite';
 import SynapticNeuralMatrix from '../components/SynapticNeuralMatrix';
 import SpatialVoiceControl from '../components/SpatialVoiceControl';
 import LiveTranspilerSandbox from '../components/LiveTranspilerSandbox';
+import AgentSwarmVisualizer from '../components/AgentSwarmVisualizer';
+import SaasValuationMatrix from '../components/SaasValuationMatrix';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
 import { 
@@ -122,52 +124,58 @@ export default function Home({ setActivePage }) {
         </div>
       </section>
 
-      {/* 1. LIVE CLAUDE CODE TRANSPILER SANDBOX */}
+      {/* 1. AUTONOMOUS MULTI-AGENT SWARM VISUALIZER */}
+      <AgentSwarmVisualizer />
+
+      {/* 2. INTERACTIVE SAAS VALUATION MATRIX 4.0 */}
+      <SaasValuationMatrix />
+
+      {/* 3. LIVE CLAUDE CODE TRANSPILER SANDBOX */}
       <LiveTranspilerSandbox />
 
-      {/* 2. SPATIAL AUDIO VOICE CONTROL & TELEMETRY */}
+      {/* 4. SPATIAL AUDIO VOICE CONTROL & TELEMETRY */}
       <SpatialVoiceControl />
 
-      {/* 3. SCI-FI SYNAPTIC AI NEURAL MATRIX */}
+      {/* 5. SCI-FI SYNAPTIC AI NEURAL MATRIX */}
       <SynapticNeuralMatrix />
 
-      {/* 4. TECH STACK SHOWCASE GRID */}
+      {/* 6. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* 5. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
+      {/* 7. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
       <BlueprintGenerator />
 
-      {/* 6. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
+      {/* 8. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
       <AudioSpectrum />
 
-      {/* 7. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
+      {/* 9. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
       <WebGLGlobe />
 
-      {/* 8. MULTI-DEVICE SAAS LIVE VIEWPORT */}
+      {/* 10. MULTI-DEVICE SAAS LIVE VIEWPORT */}
       <MultiDeviceViewport />
 
-      {/* 9. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
+      {/* 11. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
       <CyberTerminal />
 
-      {/* 10. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      {/* 12. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
       <DragDropWorkflow />
 
-      {/* 11. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
+      {/* 13. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
       <RoiCalculator3 />
 
-      {/* 12. SAAS WEB APP ENGINEERING VISUALIZER */}
+      {/* 14. SAAS WEB APP ENGINEERING VISUALIZER */}
       <SaasArchVisualizer />
 
-      {/* 13. LIVE VOICE AI PHONE DIALER DEMO */}
+      {/* 15. LIVE VOICE AI PHONE DIALER DEMO */}
       <VoiceCallSimulator />
 
-      {/* 14. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
+      {/* 16. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
       <EscrowBadgeSuite />
 
-      {/* 15. VERIFIED CASE STUDY & REVIEW MATRIX */}
+      {/* 17. VERIFIED CASE STUDY & REVIEW MATRIX */}
       <CaseStudyMatrix />
 
-      {/* 16. N8N SIMULATOR SECTION */}
+      {/* 18. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>
