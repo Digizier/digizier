@@ -15,21 +15,21 @@ export default function Navbar({ activePage, setActivePage }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home', shortLabel: 'Home', icon: Bot },
-    { id: 'services', label: 'AI Services', shortLabel: 'Services', icon: Cpu },
-    { id: 'community', label: 'YouTube & Community', shortLabel: 'Community', icon: Youtube },
-    { id: 'portfolio', label: 'AI Sandbox & Work', shortLabel: 'Sandbox', icon: Briefcase },
-    { id: 'contact', label: 'Book & Contact', shortLabel: 'Contact', icon: Calendar },
+    { id: 'home', label: 'Home', icon: Bot },
+    { id: 'services', label: 'AI Services', icon: Cpu },
+    { id: 'community', label: 'YouTube & Community', icon: Youtube },
+    { id: 'portfolio', label: 'AI Sandbox', icon: Briefcase },
+    { id: 'contact', label: 'Book & Contact', icon: Calendar },
   ];
 
   return (
-    <header className="sticky top-0 z-50 px-3 py-3 sm:px-8">
-      <div className="max-w-7xl mx-auto glass-panel rounded-2xl border border-white/10 px-4 py-2.5 sm:px-5 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-2 sm:gap-4 overflow-hidden">
+    <header className="sticky top-0 z-50 px-2 py-3 sm:px-6 md:px-8">
+      <div className="max-w-[1400px] mx-auto glass-panel rounded-2xl border border-white/10 px-3 py-2 sm:px-5 md:px-6 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-2 md:gap-4">
         
         {/* Clean Brand Logo & Title */}
         <button 
           onClick={() => setActivePage('home')}
-          className="flex items-center gap-3 group text-left focus:outline-none shrink-0"
+          className="flex items-center gap-2.5 sm:gap-3 group text-left focus:outline-none shrink-0"
         >
           {/* Official Orange Circle Logo */}
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#FF5500]/60 shadow-lg shadow-[#FF5500]/30 group-hover:scale-105 transition-transform duration-300 bg-[#0A192F] flex items-center justify-center shrink-0">
@@ -51,8 +51,8 @@ export default function Navbar({ activePage, setActivePage }) {
           </div>
         </button>
 
-        {/* Desktop Nav Items - Fully Responsive */}
-        <nav className="hidden lg:flex items-center gap-1 bg-[#030712]/70 p-1.5 rounded-xl border border-white/5">
+        {/* Desktop Nav Items - Flexible Grid Spacing */}
+        <nav className="hidden lg:flex items-center gap-1 bg-[#030712]/70 p-1.5 rounded-xl border border-white/5 mx-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activePage === item.id;
@@ -60,22 +60,21 @@ export default function Navbar({ activePage, setActivePage }) {
               <button
                 key={item.id}
                 onClick={() => setActivePage(item.id)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-lg text-xs xl:text-sm font-semibold transition-all duration-300 relative whitespace-nowrap ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 xl:px-4 xl:py-2 rounded-lg text-xs xl:text-sm font-semibold transition-all duration-300 relative whitespace-nowrap ${
                   isActive
                     ? 'text-white bg-gradient-to-r from-[#FF5500] to-[#FF7700] shadow-md shadow-[#FF5500]/30'
                     : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`}
               >
                 <Icon className={`w-3.5 h-3.5 xl:w-4 xl:h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                <span className="hidden xl:inline">{item.label}</span>
-                <span className="inline xl:hidden">{item.shortLabel}</span>
+                <span>{item.label}</span>
               </button>
             );
           })}
         </nav>
 
-        {/* Right Action Buttons - Strictly Inside Header Box */}
-        <div className="hidden sm:flex items-center gap-2 shrink-0">
+        {/* Right Action Buttons - Perfectly Scaled & Unclipped */}
+        <div className="hidden sm:flex items-center gap-2.5 shrink-0">
           <a
             href="https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9"
             target="_blank"
@@ -88,9 +87,9 @@ export default function Navbar({ activePage, setActivePage }) {
 
           <button
             onClick={() => setActivePage('contact')}
-            className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white text-xs font-bold shadow-md shadow-[#FF5500]/30 hover:scale-105 transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap shrink-0 border border-[#FF5500]/40"
+            className="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-[#FF5500]/30 hover:scale-105 transition-all duration-200 flex items-center gap-2 whitespace-nowrap shrink-0 border border-[#FF5500]/40"
           >
-            <Sparkles className="w-3.5 h-3.5 text-white" />
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             Book AI Call
           </button>
         </div>
