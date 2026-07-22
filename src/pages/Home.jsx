@@ -14,6 +14,8 @@ import BlueprintGenerator from '../components/BlueprintGenerator';
 import AudioSpectrum from '../components/AudioSpectrum';
 import EscrowBadgeSuite from '../components/EscrowBadgeSuite';
 import SynapticNeuralMatrix from '../components/SynapticNeuralMatrix';
+import SpatialVoiceControl from '../components/SpatialVoiceControl';
+import LiveTranspilerSandbox from '../components/LiveTranspilerSandbox';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
 import { 
@@ -120,46 +122,52 @@ export default function Home({ setActivePage }) {
         </div>
       </section>
 
-      {/* 1. SCI-FI SYNAPTIC AI NEURAL MATRIX */}
+      {/* 1. LIVE CLAUDE CODE TRANSPILER SANDBOX */}
+      <LiveTranspilerSandbox />
+
+      {/* 2. SPATIAL AUDIO VOICE CONTROL & TELEMETRY */}
+      <SpatialVoiceControl />
+
+      {/* 3. SCI-FI SYNAPTIC AI NEURAL MATRIX */}
       <SynapticNeuralMatrix />
 
-      {/* 2. TECH STACK SHOWCASE GRID */}
+      {/* 4. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* 3. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
+      {/* 5. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
       <BlueprintGenerator />
 
-      {/* 4. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
+      {/* 6. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
       <AudioSpectrum />
 
-      {/* 5. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
+      {/* 7. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
       <WebGLGlobe />
 
-      {/* 6. MULTI-DEVICE SAAS LIVE VIEWPORT */}
+      {/* 8. MULTI-DEVICE SAAS LIVE VIEWPORT */}
       <MultiDeviceViewport />
 
-      {/* 7. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
+      {/* 9. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
       <CyberTerminal />
 
-      {/* 8. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      {/* 10. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
       <DragDropWorkflow />
 
-      {/* 9. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
+      {/* 11. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
       <RoiCalculator3 />
 
-      {/* 10. SAAS WEB APP ENGINEERING VISUALIZER */}
+      {/* 12. SAAS WEB APP ENGINEERING VISUALIZER */}
       <SaasArchVisualizer />
 
-      {/* 11. LIVE VOICE AI PHONE DIALER DEMO */}
+      {/* 13. LIVE VOICE AI PHONE DIALER DEMO */}
       <VoiceCallSimulator />
 
-      {/* 12. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
+      {/* 14. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
       <EscrowBadgeSuite />
 
-      {/* 13. VERIFIED CASE STUDY & REVIEW MATRIX */}
+      {/* 15. VERIFIED CASE STUDY & REVIEW MATRIX */}
       <CaseStudyMatrix />
 
-      {/* 14. N8N SIMULATOR SECTION */}
+      {/* 16. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>
