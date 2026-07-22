@@ -20,10 +20,12 @@ export default function Footer({ setActivePage }) {
         {/* Col 1: Brand */}
         <div className="space-y-4 md:col-span-1">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#FF5500] to-[#00D2FF] p-[2px]">
-              <div className="w-full h-full bg-[#0A192F] rounded-[10px] flex items-center justify-center">
-                <Bot className="w-6 h-6 text-[#FF5500]" />
-              </div>
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-[#FF5500]/50 shadow-lg shadow-[#FF5500]/30 bg-[#0A192F] flex items-center justify-center">
+              <img 
+                src="/digizier_logo.png" 
+                alt="Digizier Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <span className="font-heading font-extrabold text-xl text-white">DIGIZIER</span>

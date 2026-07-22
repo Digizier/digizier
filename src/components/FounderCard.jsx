@@ -83,8 +83,8 @@ export default function FounderCard() {
                 <h4 className="font-heading font-extrabold text-white text-base">Nadir Habib</h4>
                 <p className="text-xs text-[#00D2FF] font-medium">Founder & Lead AI Architect</p>
               </div>
-              <div className="w-8 h-8 rounded-lg bg-[#FF5500] flex items-center justify-center text-white shadow-md shadow-[#FF5500]/50">
-                <Bot className="w-5 h-5" />
+              <div className="w-9 h-9 rounded-full overflow-hidden border border-[#FF5500] shadow-md shadow-[#FF5500]/50 bg-[#0A192F] flex items-center justify-center shrink-0">
+                <img src="/digizier_logo.png" alt="Digizier Logo" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
