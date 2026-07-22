@@ -10,6 +10,9 @@ import CaseStudyMatrix from '../components/CaseStudyMatrix';
 import WebGLGlobe from '../components/WebGLGlobe';
 import MultiDeviceViewport from '../components/MultiDeviceViewport';
 import MagneticButton from '../components/MagneticButton';
+import BlueprintGenerator from '../components/BlueprintGenerator';
+import AudioSpectrum from '../components/AudioSpectrum';
+import EscrowBadgeSuite from '../components/EscrowBadgeSuite';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
 import { 
@@ -119,31 +122,40 @@ export default function Home({ setActivePage }) {
       {/* 1. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* 2. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
+      {/* 2. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
+      <BlueprintGenerator />
+
+      {/* 3. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
+      <AudioSpectrum />
+
+      {/* 4. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
       <WebGLGlobe />
 
-      {/* 3. MULTI-DEVICE SAAS LIVE VIEWPORT */}
+      {/* 5. MULTI-DEVICE SAAS LIVE VIEWPORT */}
       <MultiDeviceViewport />
 
-      {/* 4. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
+      {/* 6. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
       <CyberTerminal />
 
-      {/* 5. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      {/* 7. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
       <DragDropWorkflow />
 
-      {/* 6. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
+      {/* 8. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
       <RoiCalculator3 />
 
-      {/* 7. SAAS WEB APP ENGINEERING VISUALIZER */}
+      {/* 9. SAAS WEB APP ENGINEERING VISUALIZER */}
       <SaasArchVisualizer />
 
-      {/* 8. LIVE VOICE AI PHONE DIALER DEMO */}
+      {/* 10. LIVE VOICE AI PHONE DIALER DEMO */}
       <VoiceCallSimulator />
 
-      {/* 9. VERIFIED CASE STUDY & REVIEW MATRIX */}
+      {/* 11. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
+      <EscrowBadgeSuite />
+
+      {/* 12. VERIFIED CASE STUDY & REVIEW MATRIX */}
       <CaseStudyMatrix />
 
-      {/* 10. N8N SIMULATOR SECTION */}
+      {/* 13. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>
