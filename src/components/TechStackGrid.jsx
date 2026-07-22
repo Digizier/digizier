@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Code, Cpu, Server, Layers, Globe } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function TechStackGrid() {
   const techPartners = [
@@ -35,7 +35,7 @@ export default function TechStackGrid() {
       name: 'Hostinger & Cloud Deployments',
       category: '100% Automated Hosting',
       description: 'Containerized Nginx & Node.js deployment, domain routing, SSL security, and continuous delivery.',
-      logo: '/tech/antigravity_logo.png',
+      logo: '/tech/hostinger_logo.png',
       badge: 'Cloud Infrastructure'
     }
   ];
