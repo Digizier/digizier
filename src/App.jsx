@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import WebGLCanvas from './components/WebGLCanvas';
 import Footer from './components/Footer';
 import FloatingCommandBar from './components/FloatingCommandBar';
+import RoboticAgentHud from './components/RoboticAgentHud';
 
 import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
@@ -42,6 +43,9 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 pb-28">
         {renderPage()}
       </main>
+
+      {/* Persistent Floating Robotic AI Agent HUD */}
+      <RoboticAgentHud />
 
       {/* Persistent Floating Command Bar HUD */}
       <FloatingCommandBar setActivePage={setActivePage} />

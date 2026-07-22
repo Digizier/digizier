@@ -13,6 +13,7 @@ import MagneticButton from '../components/MagneticButton';
 import BlueprintGenerator from '../components/BlueprintGenerator';
 import AudioSpectrum from '../components/AudioSpectrum';
 import EscrowBadgeSuite from '../components/EscrowBadgeSuite';
+import SynapticNeuralMatrix from '../components/SynapticNeuralMatrix';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
 import { 
@@ -119,43 +120,46 @@ export default function Home({ setActivePage }) {
         </div>
       </section>
 
-      {/* 1. TECH STACK SHOWCASE GRID */}
+      {/* 1. SCI-FI SYNAPTIC AI NEURAL MATRIX */}
+      <SynapticNeuralMatrix />
+
+      {/* 2. TECH STACK SHOWCASE GRID */}
       <TechStackGrid />
 
-      {/* 2. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
+      {/* 3. INTERACTIVE SAAS FULL-STACK BLUEPRINT GENERATOR */}
       <BlueprintGenerator />
 
-      {/* 3. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
+      {/* 4. VOICE AI NEURAL AUDIO SPECTRUM ANALYZER */}
       <AudioSpectrum />
 
-      {/* 4. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
+      {/* 5. 3D WEBGL GLOBAL AGENT DEPLOYMENT GLOBE */}
       <WebGLGlobe />
 
-      {/* 5. MULTI-DEVICE SAAS LIVE VIEWPORT */}
+      {/* 6. MULTI-DEVICE SAAS LIVE VIEWPORT */}
       <MultiDeviceViewport />
 
-      {/* 6. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
+      {/* 7. LIVE INTERACTIVE CYBER TERMINAL & COMPILER */}
       <CyberTerminal />
 
-      {/* 7. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
+      {/* 8. LIVE INTERACTIVE DRAG & DROP PIPELINE ARCHITECT */}
       <DragDropWorkflow />
 
-      {/* 8. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
+      {/* 9. INTERACTIVE BUSINESS ROI CALCULATOR 3.0 */}
       <RoiCalculator3 />
 
-      {/* 9. SAAS WEB APP ENGINEERING VISUALIZER */}
+      {/* 10. SAAS WEB APP ENGINEERING VISUALIZER */}
       <SaasArchVisualizer />
 
-      {/* 10. LIVE VOICE AI PHONE DIALER DEMO */}
+      {/* 11. LIVE VOICE AI PHONE DIALER DEMO */}
       <VoiceCallSimulator />
 
-      {/* 11. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
+      {/* 12. ENTERPRISE ESCROW PROTECTION & GUARANTEE SUITE */}
       <EscrowBadgeSuite />
 
-      {/* 12. VERIFIED CASE STUDY & REVIEW MATRIX */}
+      {/* 13. VERIFIED CASE STUDY & REVIEW MATRIX */}
       <CaseStudyMatrix />
 
-      {/* 13. N8N SIMULATOR SECTION */}
+      {/* 14. N8N SIMULATOR SECTION */}
       <section className="space-y-4">
         <N8nSimulator />
       </section>

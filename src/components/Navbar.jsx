@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LaserLogoReactor from './LaserLogoReactor';
 import { 
   Bot, 
   Cpu, 
@@ -26,19 +27,13 @@ export default function Navbar({ activePage, setActivePage }) {
     <header className="sticky top-0 z-50 px-2 py-3 sm:px-6 md:px-8">
       <div className="max-w-[1400px] mx-auto glass-panel rounded-2xl border border-white/10 px-3 py-2 sm:px-5 md:px-6 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-2 md:gap-4">
         
-        {/* Clean Brand Logo & Title */}
+        {/* Laser Scanner Animated Logo & Title */}
         <button 
           onClick={() => setActivePage('home')}
           className="flex items-center gap-2.5 sm:gap-3 group text-left focus:outline-none shrink-0"
         >
-          {/* Official Orange Circle Logo */}
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#FF5500]/60 shadow-lg shadow-[#FF5500]/30 group-hover:scale-105 transition-transform duration-300 bg-[#0A192F] flex items-center justify-center shrink-0">
-            <img 
-              src="/digizier_logo.png" 
-              alt="Digizier Official Logo" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {/* Laser Scanner Reactor Logo */}
+          <LaserLogoReactor />
 
           {/* Clean Title Stack */}
           <div className="flex flex-col justify-center">
