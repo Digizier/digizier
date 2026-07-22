@@ -26,7 +26,7 @@ export default function Navbar({ activePage, setActivePage }) {
     <header className="sticky top-0 z-50 px-3 py-3 sm:px-8">
       <div className="max-w-7xl mx-auto glass-panel rounded-2xl border border-white/10 px-4 py-2.5 sm:px-6 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-4">
         
-        {/* Brand Logo & Centered Title Badge */}
+        {/* Clean Brand Logo & Title */}
         <button 
           onClick={() => setActivePage('home')}
           className="flex items-center gap-3 group text-left focus:outline-none shrink-0"
@@ -40,16 +40,11 @@ export default function Navbar({ activePage, setActivePage }) {
             />
           </div>
 
-          {/* Title & Badge perfectly vertically centered */}
+          {/* Clean Title Stack */}
           <div className="flex flex-col justify-center">
-            <div className="flex items-center gap-2 leading-none">
-              <span className="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors">
-                DIGIZIER
-              </span>
-              <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#FF5500]/20 text-[#FF5500] border border-[#FF5500]/30 tracking-wider leading-none self-center">
-                AI AGENTS
-              </span>
-            </div>
+            <span className="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors leading-none">
+              DIGIZIER
+            </span>
             <span className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-1">
               BY NADIR HABIB
             </span>
