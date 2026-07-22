@@ -3,7 +3,6 @@ import {
   Calendar, 
   MessageSquare, 
   Mail, 
-  Send, 
   Sparkles, 
   CheckCircle2, 
   Phone, 
@@ -15,10 +14,10 @@ export default function ContactPage() {
     name: '',
     email: '',
     phone: '',
-    service: 'N8N Complex Workflow Automation',
+    service: 'SaaS App & Web Development (Claude Code & Hostinger)',
     message: ''
   });
-  const [deliveryMethod, setDeliveryMethod] = useState('whatsapp'); // 'whatsapp' | 'email'
+  const [deliveryMethod, setDeliveryMethod] = useState('whatsapp');
 
   const buildFormattedText = () => {
     return `🚀 *New Digizier Project Inquiry*%0A%0A` +
@@ -53,10 +52,10 @@ export default function ContactPage() {
           <Calendar className="w-3.5 h-3.5" /> Book A Strategy Session Or Reach Out
         </div>
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white">
-          Let’s Build Your AI Automation System
+          Let’s Build Your AI Automation & SaaS App System
         </h2>
         <p className="text-slate-400 text-sm sm:text-base">
-          Schedule a direct 1-on-1 meeting with <strong className="text-white">Nadir Habib</strong> or send an instant project inquiry via WhatsApp or Email (<strong className="text-[#00D2FF]">digizier@gmail.com</strong>).
+          Schedule a direct 1-on-1 meeting on Cal.com with <strong className="text-white">Nadir Habib</strong> or send an instant project inquiry via WhatsApp or Email (<strong className="text-[#00D2FF]">digizier@gmail.com</strong>).
         </p>
       </div>
 
@@ -75,7 +74,7 @@ export default function ContactPage() {
                 Book 1-on-1 Meeting Link
               </h3>
               <p className="text-xs text-slate-300 mt-1">
-                Select your preferred date & time on Nadir Habib’s official calendar portal.
+                Select your preferred date & time on Nadir Habib’s official Cal.com calendar portal.
               </p>
             </div>
 
@@ -96,12 +95,12 @@ export default function ContactPage() {
           </div>
 
           <a
-            href="https://digizier.com/appointment-booking"
+            href="https://cal.com/digizier-23voae/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-4 rounded-xl bg-[#FF5500] text-white font-extrabold text-xs shadow-xl shadow-[#FF5500]/30 hover:bg-[#FF7700] transition-colors flex items-center justify-center gap-2"
           >
-            <Sparkles className="w-4 h-4" /> Open Appointment Booking Portal <ExternalLink className="w-4 h-4" />
+            <Sparkles className="w-4 h-4" /> Open Cal.com Meeting Booking Portal <ExternalLink className="w-4 h-4" />
           </a>
         </div>
 
@@ -251,6 +250,7 @@ export default function ContactPage() {
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl bg-[#030712] border border-white/10 text-white text-xs focus:border-[#FF5500] focus:outline-none"
               >
+                <option value="SaaS App & Web Development (Claude Code & Hostinger)">SaaS App & Web Development (Claude Code & Hostinger)</option>
                 <option value="N8N Complex Workflow Automation">N8N Complex Workflow Automation</option>
                 <option value="Voice AI Agent & RAG System">Voice AI Agent & RAG System</option>
                 <option value="WhatsApp / IG Chatbot (Evolution API)">WhatsApp / IG Chatbot (Evolution API)</option>

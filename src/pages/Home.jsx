@@ -2,17 +2,13 @@ import React from 'react';
 import FounderCard from '../components/FounderCard';
 import N8nSimulator from '../components/N8nSimulator';
 import AIChatSandbox from '../components/AIChatSandbox';
+import TechStackGrid from '../components/TechStackGrid';
 import { 
   Sparkles, 
   Bot, 
   ArrowRight, 
   MessageSquare, 
-  Zap, 
-  ShieldCheck, 
-  TrendingUp, 
   CheckCircle2,
-  Calendar,
-  Globe,
   Youtube,
   Users
 } from 'lucide-react';
@@ -29,29 +25,31 @@ export default function Home({ setActivePage }) {
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-[#FF5500]/30 text-[#FF5500] text-xs font-bold shadow-lg shadow-[#FF5500]/10">
             <span className="w-2 h-2 rounded-full bg-[#FF5500] animate-ping"></span>
-            <span>NEXT-GEN AI AUTOMATION & DIGITAL MARKETING</span>
+            <span>NEXT-GEN AI AUTOMATION & SAAS WEB ENGINEERING</span>
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.1]">
             Scale Your Business With <br className="hidden sm:block" />
             <span className="text-gradient-orange">Autonomous AI Agents</span> & <br />
-            <span className="text-gradient-blue">N8N Workflows</span>
+            <span className="text-gradient-blue">SaaS Web Apps</span>
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            Custom Voice AI Agents, RAG Knowledge Systems, Omnichannel WhatsApp/Instagram Chatbots & Enterprise API Integrations — designed by <strong className="text-white">Nadir Habib</strong> to eliminate repetitive manual work and boost conversion ROI.
+            Custom Voice AI Agents, RAG Knowledge Systems, Full-Stack SaaS Apps (Claude Code, Antigravity 2.0) & N8N Automations — designed by <strong className="text-white">Nadir Habib</strong> to eliminate manual bottlenecks and boost ROI.
           </p>
 
           {/* Core Action CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <button
-              onClick={() => setActivePage('contact')}
+            <a
+              href="https://cal.com/digizier-23voae/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-[#FF5500] via-[#FF7700] to-[#FF5500] text-white font-extrabold text-sm shadow-xl shadow-[#FF5500]/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              Book Strategy Meeting
+              Book Cal.com Strategy Meeting
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
 
             <a
               href="https://wa.me/923222685868"
@@ -67,16 +65,16 @@ export default function Home({ setActivePage }) {
           {/* Key Value Badges */}
           <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0">
             <div className="text-center lg:text-left">
-              <span className="block font-heading font-extrabold text-xl text-white">No-Code</span>
-              <span className="text-[11px] text-slate-400">N8N Mastery</span>
+              <span className="block font-heading font-extrabold text-xl text-white">SaaS Apps</span>
+              <span className="text-[11px] text-slate-400">Claude Code Engine</span>
             </div>
             <div className="text-center lg:text-left">
               <span className="block font-heading font-extrabold text-xl text-[#00D2FF]">Voice AI</span>
-              <span className="text-[11px] text-slate-400">RAG Knowledge</span>
+              <span className="text-[11px] text-slate-400">RAG Systems</span>
             </div>
             <div className="text-center lg:text-left">
               <span className="block font-heading font-extrabold text-xl text-[#FF5500]">24/7</span>
-              <span className="text-[11px] text-slate-400">Lead Automation</span>
+              <span className="text-[11px] text-slate-400">N8N Pipelines</span>
             </div>
           </div>
 
@@ -110,7 +108,7 @@ export default function Home({ setActivePage }) {
             <span className="block font-heading font-black text-2xl sm:text-3xl text-emerald-400">
               100% Automated
             </span>
-            <span className="text-xs text-slate-400 font-medium">Enterprise N8N Pipelines</span>
+            <span className="text-xs text-slate-400 font-medium">SaaS Apps & Hostinger Deploy</span>
           </div>
 
           <div className="space-y-1">
@@ -121,6 +119,9 @@ export default function Home({ setActivePage }) {
           </div>
         </div>
       </section>
+
+      {/* TECH STACK SHOWCASE GRID */}
+      <TechStackGrid />
 
       {/* INTERACTIVE WORKFLOW SIMULATOR SECTION */}
       <section className="space-y-4">
@@ -137,7 +138,7 @@ export default function Home({ setActivePage }) {
             Test Digizier’s AI Assistant Right Now
           </h2>
           <p className="text-slate-300 text-sm leading-relaxed">
-            This live chatbot playground simulates how Digizier deploys conversational AI agents to answer customer questions, schedule meetings, and process webhooks automatically.
+            This live chatbot playground simulates how Digizier deploys conversational AI agents to answer customer questions, schedule meetings on Cal.com, and process webhooks automatically.
           </p>
 
           <ul className="space-y-2.5 pt-2 text-xs text-slate-200">
@@ -147,7 +148,7 @@ export default function Home({ setActivePage }) {
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#FF5500]" />
-              Seamless WhatsApp & Instagram API integration ready
+              SaaS Application & N8N automated backend setup
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#FF5500]" />
@@ -177,7 +178,7 @@ export default function Home({ setActivePage }) {
             Join Nadir Habib's Community
           </span>
           <h2 className="font-heading font-extrabold text-3xl text-white">
-            Ready to Master No-Code AI Automation?
+            Ready to Master No-Code AI & SaaS Development?
           </h2>
           <p className="text-slate-300 text-sm">
             Subscribe on YouTube for 4 videos every week, join our Skool classroom for live doubt solving, or message directly on WhatsApp!

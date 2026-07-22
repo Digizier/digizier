@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { 
   CheckCircle2, 
   Sparkles, 
-  Bot, 
-  Youtube, 
   MessageSquare, 
-  ExternalLink, 
   Award,
   Zap,
   Globe
@@ -102,7 +99,7 @@ export default function FounderCard() {
           <div className="flex items-start gap-2.5 text-sm text-slate-200">
             <Zap className="w-5 h-5 text-[#00D2FF] shrink-0 mt-0.5" />
             <span className="font-medium">
-              Specialized in <strong className="text-white">N8N Workflows, Voice AI, RAG Systems & APIs</strong>.
+              Specialized in <strong className="text-white">N8N Workflows, Voice AI, RAG & SaaS Apps</strong> (Claude Code, Antigravity 2.0).
             </span>
           </div>
 
@@ -126,12 +123,12 @@ export default function FounderCard() {
           </a>
 
           <a
-            href="https://digizier.com/appointment-booking"
+            href="https://cal.com/digizier-23voae/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#FF5500] text-white text-xs font-bold shadow-lg shadow-[#FF5500]/30 hover:bg-[#FF7700] transition-colors"
           >
-            <Sparkles className="w-4 h-4" /> Book Meeting
+            <Sparkles className="w-4 h-4" /> Book Cal.com Call
           </a>
         </div>
       </div>

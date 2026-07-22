@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  Bot, 
   Youtube, 
   MessageSquare, 
   Users, 
@@ -8,8 +7,7 @@ import {
   Calendar, 
   Instagram, 
   Facebook,
-  ExternalLink,
-  Sparkles
+  ExternalLink
 } from 'lucide-react';
 
 export default function Footer({ setActivePage }) {
@@ -20,7 +18,7 @@ export default function Footer({ setActivePage }) {
         {/* Col 1: Brand */}
         <div className="space-y-4 md:col-span-1">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-[#FF5500]/50 shadow-lg shadow-[#FF5500]/30 bg-[#0A192F] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-[#FF5500]/50 shadow-lg shadow-[#FF5500]/30 bg-[#0A192F] flex items-center justify-center shrink-0">
               <img 
                 src="/digizier_logo.png" 
                 alt="Digizier Logo" 
@@ -29,12 +27,12 @@ export default function Footer({ setActivePage }) {
             </div>
             <div>
               <span className="font-heading font-extrabold text-xl text-white">DIGIZIER</span>
-              <p className="text-[10px] text-slate-400">BY NADIR HABIB</p>
+              <p className="text-[10px] text-slate-400 font-semibold tracking-wider">BY NADIR HABIB</p>
             </div>
           </div>
 
           <p className="text-xs text-slate-400 leading-relaxed">
-            Enterprise AI Agents, N8N Workflow Automation, Voice AI & Digital Marketing Solutions for High-Growth Businesses Worldwide.
+            Enterprise AI Agents, N8N Workflow Automation, Voice AI & SaaS Web Application Development by Nadir Habib.
           </p>
 
           <div className="flex items-center gap-2 pt-2">
@@ -137,8 +135,8 @@ export default function Footer({ setActivePage }) {
               </a>
             </li>
             <li>
-              <a href="https://digizier.com/appointment-booking" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF5500] transition-colors flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5 text-[#00D2FF]" /> Direct Booking Link <ExternalLink className="w-3 h-3" />
+              <a href="https://cal.com/digizier-23voae/30min" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF5500] transition-colors flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-[#00D2FF]" /> Direct Cal.com Booking Link <ExternalLink className="w-3 h-3" />
               </a>
             </li>
           </ul>
@@ -164,11 +162,7 @@ export default function Footer({ setActivePage }) {
 
       <div className="max-w-7xl mx-auto pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <p>© {new Date().getFullYear()} Digizier. All rights reserved. Designed for Nadir Habib.</p>
-        <div className="flex items-center gap-4">
-          <span className="inline-flex items-center gap-1 text-[11px] text-[#00D2FF]">
-            <Sparkles className="w-3 h-3 text-[#FF5500]" /> EasyPanel & GitHub Ready
-          </span>
-        </div>
+        <p className="text-[11px] text-slate-400 font-medium">Enterprise AI & SaaS Engineering</p>
       </div>
     </footer>
   );

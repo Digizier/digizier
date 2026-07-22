@@ -51,7 +51,7 @@ export default function Navbar({ activePage, setActivePage }) {
           </div>
         </button>
 
-        {/* Desktop Nav Items - Flexible Grid Spacing */}
+        {/* Desktop Nav Items */}
         <nav className="hidden lg:flex items-center gap-1 bg-[#030712]/70 p-1.5 rounded-xl border border-white/5 mx-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -73,7 +73,7 @@ export default function Navbar({ activePage, setActivePage }) {
           })}
         </nav>
 
-        {/* Right Action Buttons - Perfectly Scaled & Unclipped */}
+        {/* Right Action Buttons */}
         <div className="hidden sm:flex items-center gap-2.5 shrink-0">
           <a
             href="https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9"
@@ -85,13 +85,15 @@ export default function Navbar({ activePage, setActivePage }) {
             <span>WhatsApp Community</span>
           </a>
 
-          <button
-            onClick={() => setActivePage('contact')}
+          <a
+            href="https://cal.com/digizier-23voae/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-[#FF5500]/30 hover:scale-105 transition-all duration-200 flex items-center gap-2 whitespace-nowrap shrink-0 border border-[#FF5500]/40"
           >
             <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
-            Book AI Call
-          </button>
+            Book Cal.com Call
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -137,15 +139,14 @@ export default function Navbar({ activePage, setActivePage }) {
             >
               <MessageSquare className="w-4 h-4" /> Direct WhatsApp (+92 322-2685868)
             </a>
-            <button
-              onClick={() => {
-                setActivePage('contact');
-                setMobileMenuOpen(false);
-              }}
-              className="w-full py-2.5 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white font-bold text-xs shadow-lg shadow-[#FF5500]/30"
+            <a
+              href="https://cal.com/digizier-23voae/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2.5 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white font-bold text-xs shadow-lg shadow-[#FF5500]/30 flex items-center justify-center gap-2"
             >
-              Book Strategy Meeting
-            </button>
+              Book Cal.com Meeting
+            </a>
           </div>
         </div>
       )}

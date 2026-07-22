@@ -6,17 +6,32 @@ import {
   Workflow, 
   TrendingUp, 
   GraduationCap, 
+  Code,
+  Globe,
   ArrowRight, 
   Check, 
   Sparkles,
-  X,
-  Bot
+  X
 } from 'lucide-react';
 
 export default function ServicesGrid({ onBookClick }) {
   const [selectedService, setSelectedService] = useState(null);
 
   const services = [
+    {
+      id: 'saas_ai',
+      title: 'SaaS App & AI Web Engineering',
+      tagline: 'Claude Code, Antigravity 2.0 & Codex Integration',
+      icon: Code,
+      color: 'from-[#FF5500] via-purple-600 to-[#00D2FF]',
+      features: [
+        'Full-stack AI SaaS application development',
+        'Powered by Claude Code & Antigravity 2.0 agent frameworks',
+        'Codex automated code compilation & API bridges',
+        'Cloud hosting configuration (Hostinger, Vercel & Docker)'
+      ],
+      details: 'We build high-performance, scalable SaaS web applications from scratch. By leveraging cutting-edge LLMs (Claude Code, Antigravity 2.0, Codex), we accelerate development speed by 10x, deploying custom full-stack solutions directly on Hostinger and cloud servers.'
+    },
     {
       id: 'n8n',
       title: 'N8N Workflow & Webhook Automation',
@@ -86,20 +101,6 @@ export default function ServicesGrid({ onBookClick }) {
         'Ad lead instant call-back automation'
       ],
       details: 'Turn ad clicks into booked meetings. We combine strategic marketing funnels with immediate automated follow-ups to maximize lead conversion rates and dramatically lower customer acquisition costs.'
-    },
-    {
-      id: 'skool',
-      title: 'Skool Community & 1-on-1 Mentorship',
-      tagline: 'Live Doubt Solving & Career Roadmaps',
-      icon: GraduationCap,
-      color: 'from-rose-500 to-pink-500',
-      features: [
-        'Skool LIVE doubt-solving & mentorship sessions',
-        'Ready-to-deploy N8N JSON workflow templates',
-        'Step-by-step career & freelancer roadmaps',
-        'Dedicated VIP WhatsApp community support'
-      ],
-      details: 'Master AI automation with Nadir Habib. Join the Digizier Skool community to get access to battle-tested workflow templates, weekly live Q&A sessions, and direct guidance on building an AI agency.'
     }
   ];
 
@@ -110,7 +111,7 @@ export default function ServicesGrid({ onBookClick }) {
           <Sparkles className="w-3.5 h-3.5" /> High-Performance AI Solutions
         </div>
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white">
-          Enterprise AI Agents & Automation Capabilities
+          Enterprise AI Agents, SaaS & Automation Capabilities
         </h2>
         <p className="text-slate-400 text-sm sm:text-base">
           Engineered by <strong className="text-white">Nadir Habib</strong> to eliminate manual bottlenecks, scale customer interactions, and drive real business ROI.
@@ -201,15 +202,14 @@ export default function ServicesGrid({ onBookClick }) {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={() => {
-                  setSelectedService(null);
-                  onBookClick();
-                }}
+              <a
+                href="https://cal.com/digizier-23voae/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 py-3 rounded-xl bg-[#FF5500] text-white font-bold text-xs shadow-lg shadow-[#FF5500]/30 hover:bg-[#FF7700] transition-colors flex items-center justify-center gap-2"
               >
-                <Sparkles className="w-4 h-4" /> Book Strategy Session for {selectedService.title}
-              </button>
+                <Sparkles className="w-4 h-4" /> Book Cal.com Session
+              </a>
               <a
                 href="https://wa.me/923222685868"
                 target="_blank"

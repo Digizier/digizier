@@ -3,10 +3,6 @@ import {
   Bot, 
   Send, 
   User, 
-  Sparkles, 
-  MessageSquare, 
-  Calendar, 
-  CheckCircle2,
   RefreshCw
 } from 'lucide-react';
 
@@ -14,7 +10,7 @@ export default function AIChatSandbox() {
   const [messages, setMessages] = useState([
     {
       sender: 'bot',
-      text: '👋 Welcome to Digizier AI! I am Nadir Habib’s AI Assistant. Ask me anything about N8N automations, Voice AI agents, or how we can automate your business operations!'
+      text: '👋 Welcome to Digizier AI! I am Nadir Habib’s AI Assistant. Ask me anything about N8N automations, Voice AI agents, Claude Code & SaaS web app development!'
     }
   ]);
   const [input, setInput] = useState('');
@@ -22,8 +18,8 @@ export default function AIChatSandbox() {
 
   const quickPrompts = [
     'How do Voice AI & RAG systems work?',
-    'What N8N automations can Digizier build?',
-    'How can I book a 1-on-1 strategy call?'
+    'What N8N & SaaS apps can Digizier build?',
+    'How can I book a Cal.com strategy call?'
   ];
 
   const handleSend = (textToSend) => {
@@ -36,15 +32,15 @@ export default function AIChatSandbox() {
     setIsTyping(true);
 
     setTimeout(() => {
-      let botReply = "Digizier specializes in custom AI Agent workflows, N8N webhooks, Voice AI (Retell/Vapi), WhatsApp/Instagram Chatbots (Evolution API), and Digital Marketing automation! Reach out directly via WhatsApp or Book a Strategy Session.";
+      let botReply = "Digizier specializes in custom AI Agent workflows, N8N webhooks, Voice AI (Retell/Vapi), SaaS App Development (Claude Code, Antigravity 2.0, Codex), and WhatsApp/Instagram Chatbots! Reach out directly via WhatsApp or Book a Strategy Session.";
       
       const qLower = query.toLowerCase();
       if (qLower.includes('voice') || qLower.includes('rag')) {
         botReply = "🎙️ Voice AI Agents combine Speech-to-Text, LLM Reasoning (GPT-4), and RAG Knowledge bases to handle inbound & outbound phone calls, qualify leads, and auto-book appointments 24/7!";
-      } else if (qLower.includes('n8n') || qLower.includes('automation')) {
-        botReply = "⚡ N8N allows us to build complex, enterprise-grade logic connecting your CRM (HubSpot, GoHighLevel, Airtable), WhatsApp, Email, and custom APIs without recurring high SaaS fees!";
-      } else if (qLower.includes('book') || qLower.includes('call') || qLower.includes('nadir') || qLower.includes('meeting')) {
-        botReply = "📅 You can book a direct 1-on-1 appointment with Nadir Habib right here: digizier.com/appointment-booking or message directly on WhatsApp (+92 322-2685868)!";
+      } else if (qLower.includes('n8n') || qLower.includes('saas') || qLower.includes('app')) {
+        botReply = "⚡ We build full-stack SaaS apps & complex N8N pipelines using Claude Code, Antigravity 2.0, and Codex, deployed 100% on Hostinger & cloud servers without recurring SaaS fees!";
+      } else if (qLower.includes('book') || qLower.includes('call') || qLower.includes('nadir') || qLower.includes('meeting') || qLower.includes('cal')) {
+        botReply = "📅 You can book a direct 30-min strategy call with Nadir Habib right here on Cal.com: cal.com/digizier-23voae/30min or message directly on WhatsApp (+92 322-2685868)!";
       }
 
       setMessages(prev => [...prev, { sender: 'bot', text: botReply }]);
@@ -140,7 +136,7 @@ export default function AIChatSandbox() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask about AI Agents, N8N, Voice Bots..."
+          placeholder="Ask about AI Agents, N8N, Claude Code, Voice Bots..."
           className="flex-1 bg-transparent px-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none"
         />
         <button

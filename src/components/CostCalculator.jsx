@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { 
   Calculator, 
-  Sparkles, 
   CheckSquare, 
   Square, 
   Clock, 
   Zap, 
-  ArrowRight,
   MessageSquare,
   Calendar
 } from 'lucide-react';
 
-export default function CostCalculator({ onBookClick }) {
-  const [selectedServices, setSelectedServices] = useState(['n8n', 'voice']);
+export default function CostCalculator() {
+  const [selectedServices, setSelectedServices] = useState(['n8n', 'voice', 'saas']);
   const [timeline, setTimeline] = useState('standard');
 
   const availableServices = [
+    { id: 'saas', name: 'SaaS App & Web Dev (Claude Code & Hostinger)', baseDays: 5 },
     { id: 'n8n', name: 'N8N Workflow Automation & Webhooks', baseDays: 3 },
     { id: 'voice', name: 'Voice AI Agent & RAG System (Retell/Vapi)', baseDays: 4 },
     { id: 'whatsapp', name: 'WhatsApp / Instagram Chatbot (Evolution API)', baseDays: 3 },
@@ -25,7 +24,7 @@ export default function CostCalculator({ onBookClick }) {
 
   const toggleService = (id) => {
     if (selectedServices.includes(id)) {
-      if (selectedServices.length === 1) return; // Keep at least one
+      if (selectedServices.length === 1) return;
       setSelectedServices(selectedServices.filter(s => s !== id));
     } else {
       setSelectedServices([...selectedServices, id]);
@@ -54,7 +53,7 @@ export default function CostCalculator({ onBookClick }) {
               Customize Your AI Solution Scope
             </h3>
             <p className="text-xs text-slate-400 mt-1">
-              Select the automation building blocks your business requires to see estimated project turnaround.
+              Select the automation & web engineering building blocks your business requires.
             </p>
           </div>
 
@@ -151,12 +150,14 @@ export default function CostCalculator({ onBookClick }) {
           </div>
 
           <div className="space-y-2 pt-4 border-t border-white/10">
-            <button
-              onClick={onBookClick}
+            <a
+              href="https://cal.com/digizier-23voae/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-3 rounded-xl bg-[#FF5500] text-white font-bold text-xs shadow-lg shadow-[#FF5500]/30 hover:bg-[#FF7700] transition-colors flex items-center justify-center gap-2"
             >
-              <Calendar className="w-4 h-4" /> Book Scope Consultation
-            </button>
+              <Calendar className="w-4 h-4" /> Book Scope Cal.com Call
+            </a>
 
             <a
               href={`https://wa.me/923222685868?text=Hi%20Nadir!%20I%20want%20a%20custom%20quote%20for%20${selectedServices.length}%20AI%20modules.`}
