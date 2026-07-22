@@ -15,16 +15,16 @@ export default function Navbar({ activePage, setActivePage }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home', icon: Bot },
-    { id: 'services', label: 'AI Services', icon: Cpu },
-    { id: 'community', label: 'YouTube & Community', icon: Youtube },
-    { id: 'portfolio', label: 'AI Sandbox & Work', icon: Briefcase },
-    { id: 'contact', label: 'Book & Contact', icon: Calendar },
+    { id: 'home', label: 'Home', shortLabel: 'Home', icon: Bot },
+    { id: 'services', label: 'AI Services', shortLabel: 'Services', icon: Cpu },
+    { id: 'community', label: 'YouTube & Community', shortLabel: 'Community', icon: Youtube },
+    { id: 'portfolio', label: 'AI Sandbox & Work', shortLabel: 'Sandbox', icon: Briefcase },
+    { id: 'contact', label: 'Book & Contact', shortLabel: 'Contact', icon: Calendar },
   ];
 
   return (
     <header className="sticky top-0 z-50 px-3 py-3 sm:px-8">
-      <div className="max-w-7xl mx-auto glass-panel rounded-2xl border border-white/10 px-4 py-2.5 sm:px-6 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-4">
+      <div className="max-w-7xl mx-auto glass-panel rounded-2xl border border-white/10 px-4 py-2.5 sm:px-5 flex items-center justify-between shadow-2xl backdrop-blur-xl gap-2 sm:gap-4 overflow-hidden">
         
         {/* Clean Brand Logo & Title */}
         <button 
@@ -32,7 +32,7 @@ export default function Navbar({ activePage, setActivePage }) {
           className="flex items-center gap-3 group text-left focus:outline-none shrink-0"
         >
           {/* Official Orange Circle Logo */}
-          <div className="w-10 h-10 rounded-full overflow-hidden border border-[#FF5500]/60 shadow-lg shadow-[#FF5500]/30 group-hover:scale-105 transition-transform duration-300 bg-[#0A192F] flex items-center justify-center shrink-0">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#FF5500]/60 shadow-lg shadow-[#FF5500]/30 group-hover:scale-105 transition-transform duration-300 bg-[#0A192F] flex items-center justify-center shrink-0">
             <img 
               src="/digizier_logo.png" 
               alt="Digizier Official Logo" 
@@ -42,16 +42,16 @@ export default function Navbar({ activePage, setActivePage }) {
 
           {/* Clean Title Stack */}
           <div className="flex flex-col justify-center">
-            <span className="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors leading-none">
+            <span className="font-heading font-extrabold text-lg sm:text-2xl tracking-tight text-white group-hover:text-[#FF5500] transition-colors leading-none">
               DIGIZIER
             </span>
-            <span className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-1">
+            <span className="text-[9px] sm:text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-0.5 sm:mt-1">
               BY NADIR HABIB
             </span>
           </div>
         </button>
 
-        {/* Desktop Nav Items */}
+        {/* Desktop Nav Items - Fully Responsive */}
         <nav className="hidden lg:flex items-center gap-1 bg-[#030712]/70 p-1.5 rounded-xl border border-white/5">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -60,40 +60,38 @@ export default function Navbar({ activePage, setActivePage }) {
               <button
                 key={item.id}
                 onClick={() => setActivePage(item.id)}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 relative whitespace-nowrap ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-lg text-xs xl:text-sm font-semibold transition-all duration-300 relative whitespace-nowrap ${
                   isActive
                     ? 'text-white bg-gradient-to-r from-[#FF5500] to-[#FF7700] shadow-md shadow-[#FF5500]/30'
                     : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                {item.label}
+                <Icon className={`w-3.5 h-3.5 xl:w-4 xl:h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                <span className="hidden xl:inline">{item.label}</span>
+                <span className="inline xl:hidden">{item.shortLabel}</span>
               </button>
             );
           })}
         </nav>
 
-        {/* Right Action Buttons */}
-        <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+        {/* Right Action Buttons - Strictly Inside Header Box */}
+        <div className="hidden sm:flex items-center gap-2 shrink-0">
           <a
             href="https://chat.whatsapp.com/FNTVH9rAtIjGm4fRPPQxr9"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all whitespace-nowrap"
+            className="hidden xl:flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all whitespace-nowrap"
           >
             <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-            <span className="hidden xl:inline">WhatsApp</span> Community
+            <span>WhatsApp Community</span>
           </a>
 
           <button
             onClick={() => setActivePage('contact')}
-            className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs text-white shadow-lg shadow-[#FF5500]/25 shrink-0"
+            className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white text-xs font-bold shadow-md shadow-[#FF5500]/30 hover:scale-105 transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap shrink-0 border border-[#FF5500]/40"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-[#FF5500] via-[#00D2FF] to-[#FF5500] animate-pulse-glow"></span>
-            <span className="relative block px-3.5 py-2 rounded-[11px] bg-[#0A192F] group-hover:bg-transparent transition-colors duration-300 flex items-center gap-1.5 whitespace-nowrap font-bold">
-              <Sparkles className="w-3.5 h-3.5 text-[#FF5500] group-hover:text-white" />
-              Book AI Call
-            </span>
+            <Sparkles className="w-3.5 h-3.5 text-white" />
+            Book AI Call
           </button>
         </div>
 
